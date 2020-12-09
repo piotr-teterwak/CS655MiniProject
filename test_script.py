@@ -11,9 +11,9 @@ parser.add_argument("average_wait_interval", help="Average wait between simulate
 parser.add_argument("measurement_frequency", help="Measure rtt every measure_frequency requests", type=int)
 parser.add_argument("number_backend_servers", help="How many backend servers to use", type=int)
 parser.add_argument("loop_length", help="How many requests to send", type=int)
+parser.add_argument("image_path", help="Test image path", type=str)
 args = parser.parse_args()
 
-TEST_IMAGE_PATH="test_images/test.jpg"
 #REST_API_URL = "http://192.12.245.161:5000/submit"
 REST_API_URL = "http://localhost:5000/submit"
 
@@ -22,9 +22,8 @@ pool = Pool(1000)
 if __name__ == '__main__':
 
     times = []
-
+    image = open(args.image_path, "rb").read()
     for x in range(args.loop_length):
-        image = open(TEST_IMAGE_PATH, "rb").read()
         file_payload = {"image":image}
         data_payload = {"number_backend_servers": args.number_backend_servers}
         wait_secs = np.random.poisson(args.average_wait_interval)
