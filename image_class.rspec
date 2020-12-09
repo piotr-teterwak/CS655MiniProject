@@ -17,7 +17,7 @@
       <ip xmlns="http://www.geni.net/resources/rspec/3" address="10.10.4.2" type="ipv4" netmask="255.255.255.0"/>
     </interface>
     <interface xmlns="http://www.geni.net/resources/rspec/3" client_id="interface-8">
-      <ip xmlns="http://www.geni.net/resources/rspec/3" address="10.10.5.1" type="ipv4"/>
+      <ip xmlns="http://www.geni.net/resources/rspec/3" address="10.10.5.1" type="ipv4" netmask="255.255.255.0"/>
     </interface>
   </node>
   <node xmlns="http://www.geni.net/resources/rspec/3" client_id="server1">
@@ -62,7 +62,7 @@
     <sliver_type xmlns="http://www.geni.net/resources/rspec/3" name="default-vm"/>
     <services xmlns="http://www.geni.net/resources/rspec/3"/>
     <interface xmlns="http://www.geni.net/resources/rspec/3" client_id="interface-9">
-      <ip xmlns="http://www.geni.net/resources/rspec/3" address="10.10.5.2" type="ipv4"/>
+      <ip xmlns="http://www.geni.net/resources/rspec/3" address="10.10.5.2" type="ipv4" netmask="255.255.255.0"/>
     </interface>
   </node>
   <link xmlns="http://www.geni.net/resources/rspec/3" client_id="link-0">
