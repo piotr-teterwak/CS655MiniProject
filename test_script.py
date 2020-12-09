@@ -14,8 +14,8 @@ parser.add_argument("loop_length", help="How many requests to send", type=int)
 parser.add_argument("image_path", help="Test image path", type=str)
 args = parser.parse_args()
 
-#REST_API_URL = "http://192.12.245.161:5000/submit"
-REST_API_URL = "http://localhost:5000/submit"
+REST_API_URL = "http://192.12.245.161:5000/submit"
+#REST_API_URL = "http://localhost:5000/submit"
 
 pool = Pool(1000)
 
