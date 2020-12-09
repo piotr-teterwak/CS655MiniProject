@@ -1,6 +1,10 @@
 from flask import Flask, render_template,request
 import requests
+import random
 app = Flask(__name__)
+
+
+servers = ['192.12.245.174']
 
 @app.route('/', methods=['GET'])
 def submit_page():
@@ -10,5 +14,6 @@ def submit_page():
 def hello_world():
     image = request.files.get("image")
     payload = {"image":image}
-    requests.post('http://192.12.245.174:5000/predict', files=payload).json()
+    server_idx = random.randint(0,len(servers)-1)
+    r = requests.post('http://{}:5000/predict'.format(servers[server_idx]), files=payload).text
     return r
