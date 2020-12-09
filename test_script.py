@@ -10,6 +10,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("average_wait_interval", help="Average wait between simulated traffic requests", type=float)
 parser.add_argument("measurement_frequency", help="Measure rtt every measure_frequency requests", type=int)
 parser.add_argument("number_backend_servers", help="How many backend servers to use", type=int)
+parser.add_argument("loop_length", help="How many requests to send", type=int)
 args = parser.parse_args()
 
 TEST_IMAGE_PATH="test_images/test.jpg"
@@ -22,7 +23,7 @@ if __name__ == '__main__':
 
     times = []
 
-    for x in range(10000):
+    for x in range(args.loop_length):
         image = open(TEST_IMAGE_PATH, "rb").read()
         file_payload = {"image":image}
         data_payload = {"number_backend_servers": args.number_backend_servers}
@@ -30,8 +31,10 @@ if __name__ == '__main__':
         sleep(wait_secs)
         start_time = time.time()
         future = pool.apply_async(requests.post,[REST_API_URL], {'files':file_payload, 'data':data_payload})
-        if (x%args.measurement_frequency == 0):
+        if ((x + 1)%args.measurement_frequency == 0):
             future.get()
             end_time = time.time()
             times.append(end_time - start_time)
-            print(times[-1])
+
+    average_time = sum(times)/len(times)
+    print(average_time)
