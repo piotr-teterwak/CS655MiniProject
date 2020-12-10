@@ -8,6 +8,12 @@ REST_API_URL = "http://10.10.5.1:5000/submit"
 
 pool = Pool(1000)
 s = requests.Session()
+
+# average_wait_interval - parameter of poisson distribution to simulate load
+# measurement_freqeuncy - how often to make sync call to measure RTT
+# number_backend_servers - How many servers to use 
+# loop length - How many calls to make total
+# image path - Image to send. 
 def run_test_loop(average_wait_interval,measurement_frequency,number_backend_servers,loop_length, image_path):
     times = []
     image = open(image_path, "rb").read()
