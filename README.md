@@ -6,13 +6,13 @@ The repository contain installation files, requirements and scripts needed to re
 
 # Reproduction instructions
 
-Either create a new slice with the [rspec](https://raw.githubusercontent.com/piotr-teterwak/CS655MiniProject/main/image_class.rspec) or use the existing slice MiniProjectImgClas. 
+Either create a new slice with the [rspec](https://raw.githubusercontent.com/piotr-teterwak/CS655MiniProject/main/image_class.rspec) or use the existing slice MiniProjectImgClass. 
 
 Log into each node and clone this repo. 
 
 Run the `install_script.sh` in each node, and follow by running `source ~/.bashrc`. 
 
-On the servers, run `python server_script.py`. On the load balancer, run `python load_balancer.py`. 
+On the servers, run `python server_script.py`. On the load balancer, run `python load_balancer.py`. If you are spinning it up on a new slice, then change the ip in `templates/index.html`. 
 
 To get experimental numbers, run `python test_rtt.py` and `python test_scaling.py` on the client.
 
@@ -27,4 +27,4 @@ When it gets a POST request, at /submit, it randomly selects 1-of-n servers. Thi
 
 # Video
 
-See a tour of our project [here] (https://github.com/piotr-teterwak/CS655MiniProject/blob/main/miniproject_video.mp4?raw=true). 
+See a tour of our project [here] (https://github.com/piotr-teterwak/CS655MiniProject/blob/main/miniproject_video.mp4).
