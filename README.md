@@ -2,7 +2,7 @@
 
 This is github rep for CS655 GENI miniproject completed by Piotr Teterwak and Arsenii Mustafin.
 
-The repository contain installation files, requirements and scripts needed to reproduce our experiments. Copy of our report can be found [here](https://docs.google.com/document/d/1ZrOqQRH866swqNUJgfwdP4bd2cT5bQS1hMqrs-XMJrI/edit?usp=sharing).
+The repository contain installation files, requirements and scripts needed to reproduce our experiments. A copy of our report can be found [here](https://github.com/piotr-teterwak/CS655MiniProject/blob/main/Miniproject%20Writeup.pdf).
 
 The website should be hosted at http://192.12.245.161:5000/. It's very simple! 
 
