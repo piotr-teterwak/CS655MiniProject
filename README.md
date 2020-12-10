@@ -4,6 +4,8 @@ This is github rep for CS655 GENI miniproject completed by Piotr Teterwak and Ar
 
 The repository contain installation files, requirements and scripts needed to reproduce our experiments. Copy of our report can be found [here](https://docs.google.com/document/d/1ZrOqQRH866swqNUJgfwdP4bd2cT5bQS1hMqrs-XMJrI/edit?usp=sharing).
 
+The website should be hosted at http://192.12.245.161:5000/. It's very simple! 
+
 # Reproduction instructions
 
 Either create a new slice with the [rspec](https://raw.githubusercontent.com/piotr-teterwak/CS655MiniProject/main/image_class.rspec) or use the existing slice MiniProjectImgClass. 
