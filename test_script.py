@@ -3,7 +3,6 @@ import requests
 import numpy as np
 from time import sleep
 import time
-import argparse
 
 REST_API_URL = "http://10.10.5.1:5000/submit"
 
