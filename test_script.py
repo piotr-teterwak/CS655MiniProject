@@ -14,6 +14,7 @@ def run_test_loop(average_wait_interval,measurement_frequency,number_backend_ser
     image = open(image_path, "rb").read()
     file_payload = {"image":image}
     data_payload = {"number_backend_servers": number_backend_servers}
+    # Burn in the connection. 
     for x in range(10):
         s.post(REST_API_URL, files=file_payload, data=data_payload)
     for x in range(loop_length):
